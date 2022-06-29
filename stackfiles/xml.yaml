@@ -1,0 +1,5 @@
+type: app
+description: XML
+template: data-hooks/init
+plugins:
+  - plugin: data-hooks/xml

@@ -1,0 +1,21 @@
+name: xml
+description: Include stackspot lib and update version
+types:
+  - app
+hooks:
+  - type: edit-xml
+    trigger: after-render
+    path: data/pom.xml
+    indent: "\t"
+    changes:
+      - xpath: "./version"
+        text:
+          value: 1.1.1-SNAPSHOT
+      - xpath: "./dependencies"
+        append:
+          value: |
+            <dependency>
+              <groupId>org.stackspot</groupId>
+              <artifactId>my-awesome-lib</artifactId>
+            </dependency>
+
