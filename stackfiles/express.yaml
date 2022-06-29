@@ -1,0 +1,5 @@
+type: app
+description: Express
+template: data-hooks/init
+plugins:
+  - plugin: data-hooks/express
