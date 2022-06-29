@@ -2,3 +2,8 @@ name: init
 description: Just init application
 types:
   - app-template
+hooks:
+  - type: run
+    trigger: after-render
+    commands:
+      - npm install

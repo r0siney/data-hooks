@@ -1,4 +1,0 @@
-name: init
-description: Just init application
-types:
-  - app-template
