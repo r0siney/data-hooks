@@ -3,7 +3,10 @@ const app = express()
 const port = 3000
 
 app.get('/', (req, res) => {
-    res.send('Hello World!')
+    parse('data/pom.xml', r => {
+        res.setHeader('Content-Type', 'application/json');
+        res.end(JSON.stringify(r.pomObject))
+    })
 })
 
 app.listen(port, () => {
